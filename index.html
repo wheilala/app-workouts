@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finn Fitness</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Summer 2026</p>
+          <h1>Finn Fitness</h1>
+        </div>
+        <button class="print-button" type="button" id="printButton" aria-label="Print or save this workout day">
+          Print day
+        </button>
+      </header>
+
+      <section class="day-hero" aria-labelledby="selectedDay">
+        <p class="today-label" id="todayLabel">Today</p>
+        <h2 id="selectedDay">Workout Plan</h2>
+        <p class="day-summary" id="daySummary"></p>
+      </section>
+
+      <section class="planner-controls" aria-label="Workout calendar controls">
+        <div class="field-group">
+          <label for="workoutTemplate">Workout list</label>
+          <select id="workoutTemplate"></select>
+        </div>
+        <div class="progress-pill" id="progressPill">0 of 0 complete</div>
+      </section>
+
+      <section class="weekly-panel" aria-labelledby="weeklyPrintableTitle">
+        <div class="weekly-controls">
+          <div>
+            <p class="eyebrow">Printable</p>
+            <h3 id="weeklyPrintableTitle">Weekly assignment sheet</h3>
+          </div>
+          <div class="weekly-actions">
+            <div class="field-group">
+              <label for="printWeek">Week of</label>
+              <select id="printWeek"></select>
+            </div>
+            <button class="print-button" type="button" id="printWeekButton" aria-label="Print this weekly assignment sheet">
+              Print week
+            </button>
+          </div>
+        </div>
+        <div class="weekly-sheet" id="weeklySheet" aria-live="polite"></div>
+      </section>
+
+      <section class="calendar-panel" aria-label="Workout calendar">
+        <div class="calendar-header">
+          <button class="calendar-nav" type="button" id="previousMonth" aria-label="Previous month">Prev</button>
+          <h3 id="calendarTitle">Calendar</h3>
+          <button class="calendar-nav" type="button" id="nextMonth" aria-label="Next month">Next</button>
+        </div>
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>Sun</span>
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </section>
+
+      <section class="area-grid" id="areaGrid" aria-live="polite"></section>
+
+      <footer class="footer-note">
+        <span id="sourceNote"></span>
+      </footer>
+    </main>
+
+    <script src="./data/workouts.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
