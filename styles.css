@@ -158,6 +158,59 @@ h1 {
   background: var(--panel);
 }
 
+.weekly-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.weekly-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.weekly-toggle .eyebrow {
+  display: block;
+}
+
+.weekly-toggle strong {
+  display: block;
+  font-size: 1.05rem;
+  line-height: 1.15;
+}
+
+.weekly-toggle-action {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 850;
+}
+
+.weekly-panel[open] .weekly-toggle {
+  margin-bottom: 14px;
+}
+
+.weekly-panel[open] .weekly-toggle-action {
+  color: var(--ink);
+}
+
+.weekly-panel[open] .weekly-toggle-action::before {
+  content: "Hide";
+}
+
+.weekly-panel[open] .weekly-toggle-action {
+  font-size: 0;
+}
+
+.weekly-panel[open] .weekly-toggle-action::before {
+  font-size: 0.84rem;
+}
+
 .weekly-controls {
   display: flex;
   justify-content: space-between;

@@ -32,11 +32,18 @@
         <div class="progress-pill" id="progressPill">0 of 0 complete</div>
       </section>
 
-      <section class="weekly-panel" aria-labelledby="weeklyPrintableTitle">
+      <details class="weekly-panel" aria-labelledby="weeklyPrintableTitle">
+        <summary class="weekly-toggle">
+          <span>
+            <span class="eyebrow">Printable</span>
+            <strong id="weeklyPrintableTitle">Weekly assignment sheet</strong>
+          </span>
+          <span class="weekly-toggle-action">Show</span>
+        </summary>
         <div class="weekly-controls">
           <div>
             <p class="eyebrow">Printable</p>
-            <h3 id="weeklyPrintableTitle">Weekly assignment sheet</h3>
+            <h3>Weekly assignment sheet</h3>
           </div>
           <div class="weekly-actions">
             <div class="field-group">
@@ -49,7 +56,7 @@
           </div>
         </div>
         <div class="weekly-sheet" id="weeklySheet" aria-live="polite"></div>
-      </section>
+      </details>
 
       <section class="calendar-panel" aria-label="Workout calendar">
         <div class="calendar-header">
